@@ -1,6 +1,9 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except[:index,:show]
+  before_action only:[:new,:create,:edit,:update,:destroy] do
+  authorize_request[:author,:admin]
+  end
   # GET /offers or /offers.json
   def index
     @offers = Offer.all
@@ -22,7 +25,7 @@ class OffersController < ApplicationController
   # POST /offers or /offers.json
   def create
     @offer = Offer.new(offer_params)
-
+    offer.user = current_user
     respond_to do |format|
       if @offer.save
         format.html { redirect_to offer_url(@offer), notice: "Offer was successfully created." }
