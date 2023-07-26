@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   # Relations
-      #has_many :offers
+      has_many :offers
       has_many :postulants
       # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

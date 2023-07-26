@@ -1,0 +1,26 @@
+<nav>
+  <ul>
+  <% if user_signed_in? %>
+  <% current_user.email %>
+  <li>
+        <%= link_to 'Home', '/' %>
+  </li>
+  <li>
+        <%= link_to 'inicia sesion', new_user_session_path %>
+  </li>
+  <li>
+      <%= button_to 'cierre sesion', destroy_user_session_path, method: :delete %>
+  </li>
+  <%else%>
+  <li>
+      <%= link_to 'inicia sesion', new_user_session_path %>
+  </li>
+  <li>
+      <%= link_to 'registrate', new_user_registration_path %>
+  </li>
+  <li>
+      <%= button_to 'cierre sesion', destroy_user_session_path, method: :delete %>
+  </li>
+  </ul>
+  <%end%>
+  </nav>
