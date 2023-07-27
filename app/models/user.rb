@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+      has_one_attached :image
   # Relations
       has_many :offers
       has_many :postulants

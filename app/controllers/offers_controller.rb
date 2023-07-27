@@ -1,8 +1,8 @@
 class OffersController < ApplicationController
-  #before_action :set_offer, only: %i[ show edit update destroy ]
+  #before_action :set_offer, only: %i[ edit update destroy ]
   #before_action :authenticate_user!, except[:index,:show]
   #before_action only:[:new,:create,:edit,:update,:destroy] do
-  #authorize_request[:author,:admin]
+  #authorize_request[:admin]
   #end
 
   # GET /offers or /offers.json

@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :photo %><br />
-    <%= f.text_field :photo, autocomplete: "photo" %>
+    <%= f.label :"Sube una foto a tu perfil" %><br />
+    <%= f.file_field :image %>
   </div>
 
   <div class="actions">
@@ -32,3 +32,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<%= link_to "Show", user_show_path %>
