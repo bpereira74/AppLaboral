@@ -8,9 +8,17 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= @user.password %>
 
   <div class="field">
     <%= f.label :"Tu foto" %><br />
-    <%= f.file_field :image %>
+    <%= @user.image %>
   </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+<%= render "devise/shared/links" %>
+<%if current user%>
