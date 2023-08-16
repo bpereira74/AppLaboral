@@ -1,5 +1,5 @@
 #Título del Proyecto AppLaboral 
-
+Puede observar el proyectro en https://applaboral-35d9058e579e.herokuapp.com/
 Descripción Este proyecto es un avance de mi aprendizaje en Ruby on Rails, consiste en el desarrollo de un proyecto sobre Ofertas de trabajo las que pueden ser ingresadas solo por el administrador, mientras que las postulaciones pueden realizarse a traves del registro de usuario, solo realizado por el admministrador
 
 Prerrequisitos 📋
