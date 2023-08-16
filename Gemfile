@@ -78,3 +78,5 @@ gem "annotate", "~> 3.2"
 gem "figaro", "~> 1.2"
 
 gem "aws-sdk-s3", "~> 1.132"
+
+gem "minitest", "~> 5.18"
